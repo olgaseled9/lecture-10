@@ -16,7 +16,7 @@ import static org.postgresql.util.JdbcBlackHole.close;
 public class OrderDaoImpl implements OrderDao {
 
 
-    private final static Logger logger = LoggerFactory.getLogger(OrderDaoImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrderDaoImpl.class);
     private DataSource dataSource;
 
     public static final String SELECT_FROM_ORDER_TABLE = "SELECT * FROM Orders ORDER BY order_id LIMIT 100 OFFSET 1;";
