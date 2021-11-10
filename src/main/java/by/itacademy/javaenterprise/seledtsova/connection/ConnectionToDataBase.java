@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 public class ConnectionToDataBase {
 
-    private final static Logger logger = LoggerFactory.getLogger(ConnectionToDataBase.class);
+    private static final Logger logger = LoggerFactory.getLogger(ConnectionToDataBase.class);
 
     static {
         loadDriver();
