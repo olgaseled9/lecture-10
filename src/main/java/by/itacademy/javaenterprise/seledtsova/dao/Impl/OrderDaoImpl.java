@@ -19,7 +19,7 @@ public class OrderDaoImpl implements OrderDao {
     private static final Logger logger = LoggerFactory.getLogger(OrderDaoImpl.class);
     private DataSource dataSource;
 
-    public static final String SELECT_FROM_ORDER_TABLE = "SELECT * FROM Orders ORDER BY order_id LIMIT 100 OFFSET 1;";
+    public static final String SELECT_FROM_ORDER_TABLE = "SELECT order_id, customer_id, date_order FROM Orders ORDER BY order_id LIMIT 100 OFFSET 1;";
     public static final String DELETE_ORDER_FROM_ORDER_TABLES = "DELETE FROM Orders WHERE order_id = ?";
     private static final String ADD_NEW_ORDER = "INSERT INTO Orders (order_id, customer_id, date_order) VALUES (?,?,?)";
 
